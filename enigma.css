@@ -1,0 +1,126 @@
+html{
+	height: 98%;
+}
+
+body{
+	text-align: center;
+	font-family: courier;
+	font-size: 20px;
+	height: 100%;
+	background-image: url("images/enigma_background_main.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+body > div{
+	text-align: center;
+}
+
+#head{
+	display: inline-block;
+	width: 90%;
+	position: fixed;
+	left: 50%;
+	margin-left: -45%;
+
+	z-index: 1;
+
+	border-radius: 5px;
+
+	background-color: #938986;
+	box-shadow: 0px 0px 5px #000000;
+}
+
+#head > div{
+	position: fixed;
+	text-align: center;
+	top: 4.5%;
+}
+
+#contents{
+	width: 15%;
+	left: 5%;
+}
+
+ul{
+	list-style-type: none;
+}
+
+li{
+	color: white;
+}
+
+#head > div:hover > ul{
+	display: inline-block;
+}
+
+#head > div > ul{
+	position: relative;
+	top: 40px;
+	display: none;
+
+
+	text-align: left;
+}
+
+#body{
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	color: white;
+	width: 60%;
+	min-height: 88%;
+	position: relative;
+	top: 100px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin-bottom: 10px;
+	box-shadow: 0px 3px 5px #000000;
+}
+
+#body > p{
+	padding: 0px 25px;
+	text-align: justify;
+}
+
+li{
+	margin: 5px 0px;
+
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+#gallery img{
+	display: inline-block;
+	width: 50%;
+	margin: 10px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 20px black;
+}
+
+@keyframes focus{
+	from{width: 50%;}
+	to{width: 75%;}
+}
+
+@keyframes fade{
+	from{opacity: 1}
+	to{opacity: 0}
+}
+
+#gallery img:hover{
+	animation-name: focus;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	max-width: 100%;
+}
+
+#gallery:hover img:not(:hover){
+	animation-name: fade;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}

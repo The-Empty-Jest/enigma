@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel = "icon" href = "icon.ico" />
+	<link rel = "stylesheet" href = "enigma.css" />
+	<title>The Enigma Machine</title>
+</head>
+<body onload="initialize();">
+	<div id = "head">
+		<h1 id = "title">THE ENIGMA MACHINE</h1>
+		<div id = "contents" onclick = "drop;">
+			<span>NAVIGATION &#9660;</span>
+			<ul>
+				<li><a href = "index.html">HOME</a></li>
+				<li><a href = "enigma.html">SIMULATION</a></li>
+				<li><a href = "gallery.html">IMAGE GALLERY</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id = "body">
+		<h2 name = "history">HISTORY</h2>
+		<p>The Enigma Machine was a cryptography device invented by German engineer Arthur Scherbius at the end of World War I. They had their most notable role however a few decades later, during World War II. During this time Nazi Germany used the device to encrypt military information during the war.</p>
+
+		<p>The first people to come close to breaking the Enigma machine's code were the Polish, who were able to recreate an Enigma machine and read messages from the German armed forces between 1933 and 1938. In 1939 the Polish shared their knowledge with the British, who, facing the war, began an attempt to crack the code with the aid of top mathemematicians and early computers.</p>
+
+		<p>For a long while, the Germans were almost correct in thinking their code was unbreakable. It was not until Alan Turing, working at Britian's Government Code and Cypher School, designed the bombe, a machine that could crack the enigma code. This machine exploited a flaw in Enigma's system of encryption. Part of the genius of the device was that a letter would map to any of the other letters in the alphabet, in such a way that would seem random to a unsuspecting human. However, the problem with this was that a letter could never become itself during encryption. Thus, Turing's machine used this principal to deduce the encryption settings for a given day through trial and error. Later, mathematician Gordan Welchman improved upon the functionality of the bombe, including a way to exploit the fact that plugboard settings on the enigma machine always came in pairs.</p>
+
+		<p>Once the Germans realized that their code could be broken, they enhanced their security by intorducing another layer of encryption to the enigma machines in the form of another rotor. However, for the Germans, this move proved fruitless, as the British and Americans improved upon the bombe, then able to crack 4 rotor enigma codes at an even faster rate than the previous iterations of the bombe.</p>
+
+		<h2 name = "work">HOW IT WORKS</h2>
+		<p>The enigma machine worked on a series of electrical currents and mechanical rotors. To operate it, one would simpy press a key on a typewriter like keyboard, and record the letter of the light the illuminated upon the key being pressed. Internally, when a key was pressed, it passed an electronic signal through a system called the plugboard, which served as the first level of encryption. Wires on the plugboard could be swapped around , such that one letter, upon being pressed, was converted to another before being scrambled by a series of rotors. These plugboard settings always came in pairs, so if A corresponded to T, T would also correspond to A.</p>
+
+		<p>Next the electronic signal was converted to mechanical to operate with the rotors. Initially the machine worked with three rotors, each of which changed the letter that was input to another letter based on the specifications built into the rotor. Machines originally came with boxes of five rotors, any three of which could be used in the machine at time, in any order. After the signal was sent through the three rotors, it was then sent through another rotor called the reflector, which changed the letter again before passing the signal back through the three main rotors and the plugboard in the reverse order, finally reaching a light.</p>
+
+		<p>Alone, this system would not be very strong, as it would be as simple as a <a href = "https://www.wikiwand.com/en/Substitution_cipher">substitution cipher</a>. The greatest part of the device was in the fact that each time a signal was passed forwards through the right most rotor, it would shift one postion, changing the letter correspondences. In addition, when the right rotor reached a certain position, it would cause the middle rotor to shift as well. When the middle rotor reached a certain position, it would cause itself as well as the left rotor to shift. This system created the scrambling effect that made the enigma machine such a formidable problem to solve.</p>
+
+		<h2 name = "sim">HOW TO USE SIMULATION</h2>
+		<p>The simulation on this site operate on the same principles as a basic three rotor enigma machine. Prior to typing a message to encrypt/decrypt, any of the rotors, their starting positions, or plugboard settings may be changed. To keep the system simple and to mimic the way the Germans used the machine, the settings may not be changed upon begining a message. To change the settings, the input field must be cleared, either by manually deleting the text or using the clear button. To reset back to default settings, just refresh the page.</p>
+	</div>
+</body>
+</html>

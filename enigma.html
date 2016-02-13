@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Enigma Simulation</title>
+	<link rel = "icon" href = "icon.ico" />
+	<link rel = "stylesheet" href = "enigma.css" />
+	<link rel = "stylesheet" href = "sim.css" />
+	<script src = "enigma.js"></script>
+</head>
+<body onload = "initialize();">
+	<div id = "head">
+		<h1 id = "title">THE ENIGMA MACHINE</h1>
+		<div id = "contents">
+			<span>NAVIGATION &#9660;</span>
+			<br />
+			<ul>
+				<li><a href = "index.html">HOME</a></li>
+				<li><a href = "enigma.html">SIMULATION</a></li>
+				<li><a href = "gallery.html">IMAGE GALLERY</a></li>
+			</ul>
+		</div>
+		<div id = "plugboard">
+			<span>PLUGBOARD &#9660;</span>
+			<br />
+			<ul>
+				<li><span class = "pbl">A &rArr;</span> <input class = "pbs" type="text" value="A"></li>
+				<li><span class = "pbl">B &rArr;</span> <input class = "pbs" type="text" value="B"></li>
+				<li><span class = "pbl">C &rArr;</span> <input class = "pbs" type="text" value="C"></li>
+				<li><span class = "pbl">D &rArr;</span> <input class = "pbs" type="text" value="D"></li>
+				<li><span class = "pbl">E &rArr;</span> <input class = "pbs" type="text" value="E"></li>
+				<li><span class = "pbl">F &rArr;</span> <input class = "pbs" type="text" value="F"></li>
+				<li><span class = "pbl">G &rArr;</span> <input class = "pbs" type="text" value="G"></li>
+				<li><span class = "pbl">H &rArr;</span> <input class = "pbs" type="text" value="H"></li>
+				<li><span class = "pbl">I &rArr;</span> <input class = "pbs" type="text" value="I"></li>
+				<li><span class = "pbl">J &rArr;</span> <input class = "pbs" type="text" value="J"></li>
+				<li><span class = "pbl">K &rArr;</span> <input class = "pbs" type="text" value="K"></li>
+				<li><span class = "pbl">L &rArr;</span> <input class = "pbs" type="text" value="L"></li>
+				<li><span class = "pbl">M &rArr;</span> <input class = "pbs" type="text" value="M"></li>
+				<li><span class = "pbl">N &rArr;</span> <input class = "pbs" type="text" value="N"></li>
+				<li><span class = "pbl">O &rArr;</span> <input class = "pbs" type="text" value="O"></li>
+				<li><span class = "pbl">P &rArr;</span> <input class = "pbs" type="text" value="P"></li>
+				<li><span class = "pbl">Q &rArr;</span> <input class = "pbs" type="text" value="Q"></li>
+				<li><span class = "pbl">R &rArr;</span> <input class = "pbs" type="text" value="R"></li>
+				<li><span class = "pbl">S &rArr;</span> <input class = "pbs" type="text" value="S"></li>
+				<li><span class = "pbl">T &rArr;</span> <input class = "pbs" type="text" value="T"></li>
+				<li><span class = "pbl">U &rArr;</span> <input class = "pbs" type="text" value="U"></li>
+				<li><span class = "pbl">V &rArr;</span> <input class = "pbs" type="text" value="V"></li>
+				<li><span class = "pbl">W &rArr;</span> <input class = "pbs" type="text" value="W"></li>
+				<li><span class = "pbl">X &rArr;</span> <input class = "pbs" type="text" value="X"></li>
+				<li><span class = "pbl">Y &rArr;</span> <input class = "pbs" type="text" value="Y"></li>
+				<li><span class = "pbl">Z &rArr;</span> <input class = "pbs" type="text" value="Z"></li>
+			</ul>
+		</div>
+	</div>
+	<div id = "body">
+		<div>
+			<label>INPUT: <input id = "input" type = "text" /></label> <button onclick="clearInput();">CLEAR</button>
+		</div>
+		<div id = "board">
+			<div id = "lights">
+				<div>
+					<span class = "light">Q</span>
+					<span class = "light">W</span>
+					<span class = "light">E</span>
+					<span class = "light">R</span>
+					<span class = "light">T</span>
+					<span class = "light">Z</span>
+					<span class = "light">U</span>
+					<span class = "light">I</span>
+					<span class = "light">O</span>
+				</div>
+				<div>
+					<span class = "light">A</span>
+					<span class = "light">S</span>
+					<span class = "light">D</span>
+					<span class = "light">F</span>
+					<span class = "light">G</span>
+					<span class = "light">H</span>
+					<span class = "light">J</span>
+					<span class = "light">K</span>
+				</div>
+				<div>
+					<span class = "light">P</span>
+					<span class = "light">Y</span>
+					<span class = "light">X</span>
+					<span class = "light">C</span>
+					<span class = "light">V</span>
+					<span class = "light">B</span>
+					<span class = "light">N</span>
+					<span class = "light">M</span>
+					<span class = "light">L</span>
+				</div>
+			</div>
+			<div id = "keyboard">
+				<div>
+					<button onclick = "run('Q');"> Q </button>
+					<button onclick = "run('W');"> W </button>
+					<button onclick = "run('E');"> E </button>
+					<button onClick = "run('R');"> R </button>
+					<button onclick = "run('T');"> T </button>
+					<button onclick = "run('Z');"> Z </button>
+					<button onclick = "run('U');"> U </button>
+					<button onclick = "run('I');"> I </button>
+					<button onclick = "run('O');"> O </button>
+				</div>
+
+				<div>
+					<button onclick = "run('A');"> A </button>
+					<button onclick = "run('S');"> S </button>
+					<button onclick = "run('D');"> D </button>
+					<button onclick = "run('F');"> F </button>
+					<button onclick = "run('G');"> G </button>
+					<button onclick = "run('H');"> H </button>
+					<button onclick = "run('J');"> J </button>
+					<button onclick = "run('K');"> K </button>
+				</div>
+
+				<div>
+					<button onclick = "run('P');"> P </button>
+					<button onclick = "run('Y');"> Y </button>
+					<button onclick = "run('X');"> X </button>
+					<button onclick = "run('C');"> C </button>
+					<button onclick = "run('V');"> V </button>
+					<button onclick = "run('B');"> B </button>
+					<button onclick = "run('N');"> N </button>
+					<button onclick = "run('M');"> M </button>
+					<button onclick = "run('L');"> L </button>
+				</div>
+			</div>
+		</div>
+		<div id = "newLet">OUTPUT: </div>
+		<div id = "rotorpositions">
+			POSITIONS<br/>
+			<button class = "shiftButtons" onclick = "shiftCurrent('left');">&#10094;</button><span id = "rotor1">A</span><button class = "shiftButtons" onclick = "reverseShiftCurrent('left');">&#10095;</button>
+			<button class = "shiftButtons" onclick = "shiftCurrent('middle');">&#10094;</button><span id = "rotor2">A</span><button class = "shiftButtons" onclick = "reverseShiftCurrent('middle');">&#10095;</button>
+			<button class = "shiftButtons" onclick = "shiftCurrent('right')">&#10094;</button><span id = "rotor3">A</span><button class = "shiftButtons" onclick = "reverseShiftCurrent('right');">&#10095;</button>
+		</div>
+
+		<div id = "rotorsettings" onchange = "setRotors();">
+			<p>ROTORS &#9660;</p>
+			<ul>
+				<li>
+					LEFT:
+					<select class = "rotorsettings">
+						<option selected value = "0">I</option>
+						<option value = "1">II</option>
+						<option value = "2">III</option>
+						<option value = "3">IV</option>
+						<option value = "4">V</option>
+					</select>
+				</li>
+
+				<li>
+					MIDDLE:
+					<select class = "rotorsettings">
+						<option value = "0">I</option>
+						<option selected value = "1">II</option>
+						<option value = "2">III</option>
+						<option value = "3">IV</option>
+						<option value = "4">V</option>
+					</select>
+				</li>
+
+				<li>
+					RIGHT:
+					<select class = "rotorsettings">
+						<option value = "0">I</option>
+						<option value = "1">II</option>
+						<option selected value = "2">III</option>
+						<option value = "3">IV</option>
+						<option value = "4">V</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

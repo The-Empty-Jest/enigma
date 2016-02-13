@@ -1,0 +1,92 @@
+button, select, option{
+	cursor: pointer;
+	font-family: courier;
+	background-color: #353535;
+	outline: none;
+	color: white;
+	border-radius: 10px;
+}
+
+input{
+	text-transform: uppercase;
+}
+
+#board *{
+	border-radius: 50%;
+	color: white;
+	margin: 1px;
+}
+
+div#keyboard button{
+	font-size: 20px;
+	width: 55px;
+	height: 55px;
+}
+
+div#lights span{
+	font-size: 20px;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-color: #505050;
+}
+
+#input{
+	margin-top: 100px;
+	margin-bottom: 10px;
+}
+
+div{
+	text-align: center;
+}
+
+#rotorpositions > button{
+	margin: 0px 5px;
+	border-radius: 50%;
+	outline: none;
+}
+
+ul{
+	list-style-type: none;
+}
+
+#rotorsettings > ul > li{
+	display: inline-block;
+	margin: 20px;
+}
+
+#rotorsettings > ul > li > ul{
+	text-align: left;
+}
+
+#rotorsettings > ul{
+	visibility: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+
+#rotorsettings:hover > ul{
+	visibility: visible;
+}
+
+#plugboard{
+	right: 10%;
+}
+
+#plugboard span{
+	margin: 0px 0px;
+}
+
+#plugboard li{
+	font-size: 17px;
+}
+
+#plugboard input{
+	font-family: courier;
+	text-align: center;
+	font-size: 17px;
+	padding: 2px;
+	border: none;
+	width: 15px;
+	border-radius: 2px;
+}
